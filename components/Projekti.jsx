@@ -6,7 +6,7 @@ import { ArrowRight } from 'lucide-react';
 import { useRef, useState } from 'react';
 import avstrija1 from '@/assets/images/avstrija-1-mod.jpg';
 import avstrija2 from '@/assets/images/avstrija-2-mod.jpg';
-import haleOne from '@/assets/images/hale-one.jpg';
+import haleOne from '@/assets/images/hale-one.JPG';
 
 const items = [
 	{
