@@ -1,11 +1,7 @@
 import {
-	DribbbleIcon,
 	FacebookIcon,
-	GithubIcon,
 	InstagramIcon,
 	LinkedinIcon,
-	TwitchIcon,
-	TwitterIcon,
 	YoutubeIcon,
 } from 'lucide-react';
 

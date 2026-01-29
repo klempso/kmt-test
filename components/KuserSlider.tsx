@@ -1,4 +1,3 @@
-import React from 'react';
 import SliderKmt from '../components/Slider';
 import { useRef } from 'react';
 import { useGSAP } from '@gsap/react';

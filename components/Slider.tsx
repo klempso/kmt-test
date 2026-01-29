@@ -6,10 +6,9 @@ import {
 	CarouselNext,
 	CarouselPrevious,
 } from '@/components/ui/carousel';
-import { Ellipsis, Eye } from 'lucide-react';
-import React from 'react';
+import { Ellipsis } from 'lucide-react';
 
-export default function SliderKmt({ sliderItems }) {
+export default function SliderKmt({ sliderItems }: any) {
 	return (
 		<Carousel
 			opts={{
@@ -22,7 +21,7 @@ export default function SliderKmt({ sliderItems }) {
 				<CarouselNext className='kmt__carousel-nav-btn' />
 			</div>
 			<CarouselContent>
-				{sliderItems.map((item, index) => (
+				{sliderItems.map((item: any, index: any) => (
 					<CarouselItem key={index} className='md:basis-1/2 lg:basis-1/4'>
 						<div>
 							<Card

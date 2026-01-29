@@ -18,7 +18,7 @@ function App() {
 	const lenisRef = useRef(null);
 
 	useEffect(() => {
-		function update(time) {
+		function update(time: any) {
 			lenisRef.current?.lenis?.raf(time * 1000);
 		}
 		gsap.ticker.add(update);
