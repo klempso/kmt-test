@@ -1,12 +1,12 @@
-const images = [
-	'../src/assets/images/partner-1.png',
-	'../src/assets/images/partner-2.jpg',
-	'../src/assets/images/partner-3.webp',
-	'../src/assets/images/partner-5.png',
-	'../src/assets/images/partner-6.jpg',
-	'../src/assets/images/partner-7.webp',
-	'../src/assets/images/partner-8.webp',
-];
+import p1 from '@/assets/images/partner-1.png';
+import p2 from '@/assets/images/partner-2.jpg';
+import p3 from '@/assets/images/partner-3.webp';
+import p5 from '@/assets/images/partner-5.png';
+import p6 from '@/assets/images/partner-6.jpg';
+import p7 from '@/assets/images/partner-7.webp';
+import p8 from '@/assets/images/partner-8.webp';
+
+const images = [p1, p2, p3, p5, p6, p7, p8];
 
 const Partnerji = () => {
 	return (

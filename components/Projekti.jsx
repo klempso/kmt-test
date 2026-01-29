@@ -4,33 +4,37 @@ import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ArrowRight } from 'lucide-react';
 import { useRef, useState } from 'react';
+import avstrija1 from '@/assets/images/avstrija-1-mod.jpg';
+import avstrija2 from '@/assets/images/avstrija-2-mod.jpg';
+import haleOne from '@/assets/images/hale-one.jpg';
+
 const items = [
 	{
 		title: 'Nemčija',
 		content: 'Yes. It adheres to the WAI-ARIA design pattern.',
 		h3: 'Skladiščne hale za kmete',
-		img: '../src/assets/images/avstrija-1-mod.jpg',
+		img: avstrija1,
 	},
 	{
 		title: 'Avstrija',
 		content:
 			"Yes. It comes with default styles that matches the other components' aesthetic.",
 		h3: 'Skladiščne hale za kmete',
-		img: '../src/assets/images/avstrija-1-mod.jpg',
+		img: avstrija1,
 	},
 	{
 		title: 'Norveška',
 		content:
 			"Yes. It's animated by default, but you can disable it if you prefer.",
 		h3: 'Skladiščne hale za kmete',
-		img: '../src/assets/images/avstrija-1-mod.jpg',
+		img: avstrija1,
 	},
 	{
 		title: 'Hrvaška',
 		content:
 			"Yes. It comes with default styles that matches the other components' aesthetic.",
 		h3: 'Skladiščne hale za kmete',
-		img: '../src/assets/images/avstrija-1-mod.jpg',
+		img: avstrija1,
 	},
 ];
 
@@ -39,32 +43,32 @@ const itemsSlo = [
 		title: 'asdf',
 		content: 'Yes. It adheres to the WAI-ARIA design pattern.',
 		h3: 'Skladiščne hale za kmete',
-		img: '../src/assets/images/hale-one.jpg',
+		img: haleOne,
 	},
 	{
 		title: 'fsda',
 		content:
 			"Yes. It comes with default styles that matches the other components' aesthetic.",
 		h3: 'Skladiščne hale za kmete',
-		img: '../src/assets/images/hale-one.jpg',
+		img: haleOne,
 	},
 	{
 		title: 'Norveška',
 		content:
 			"Yes. It's animated by default, but you can disable it if you prefer.",
 		h3: 'Skladiščne hale za kmete',
-		img: '../src/assets/images/hale-one.jpg',
+		img: haleOne,
 	},
 	{
 		title: 'Hrvaška',
 		content:
 			"Yes. It comes with default styles that matches the other components' aesthetic.",
 		h3: 'Skladiščne hale za kmete',
-		img: '../src/assets/images/hale-one.jpg',
+		img: haleOne,
 	},
 ];
 
-const dummySrc = '../src/assets/images/avstrija-2-mod.jpg';
+const dummySrc = avstrija2;
 const Projekti = () => {
 	const sliderTop = useRef();
 	const [currentIndex, setCurrentIndex] = useState(0);
@@ -105,7 +109,7 @@ const Projekti = () => {
 				duration: 0.8,
 				ease: 'power3.out',
 			},
-			'+=0.1' // ⬅️ 0.5s after left
+			'+=0.1', // ⬅️ 0.5s after left
 		);
 	});
 
@@ -113,7 +117,7 @@ const Projekti = () => {
 		gsap.fromTo(
 			'.projekti__images',
 			{ opacity: 0, xPercent: 100 },
-			{ xPercent: 0, opacity: 1, duration: 0.6, ease: 'power1.inOut' }
+			{ xPercent: 0, opacity: 1, duration: 0.6, ease: 'power1.inOut' },
 		);
 	}, [currentIndex]);
 	const finalProjekt = chosenProjekt === 1 ? items : itemsSlo;

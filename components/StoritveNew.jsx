@@ -1,5 +1,8 @@
-'use client';
 import * as React from 'react';
+import avstrija1 from '@/assets/avstrija-1-mod.jpg';
+import avstrija2 from '@/assets/avstrija-2-mod.jpg';
+import haleOne from '@/assets/hale-one.JPG';
+import banner3 from '@/assets/banner-3-mod.jpg';
 import {
 	Warehouse,
 	House,
@@ -25,34 +28,31 @@ const storitveItems = [
 		icon: 'hale',
 		content:
 			'Skladiščne hale so optimalna rešitev za dodaten skladiščni prostor, ki se lahko uporablja kot začasen ali stalen objekt. Njihova zasnovanost.',
-
-		src: '../src/assets/avstrija-1-mod.jpg',
+		src: avstrija1,
 	},
 	{
 		title: 'Večnamenski šotori',
 		icon: 'sotori',
 		content:
 			'Skladiščne hale so optimalna rešitev za dodaten skladiščni prostor, ki se lahko uporablja kot začasen ali stalen objekt. Njihova zasnovanost.',
-
-		src: '../src/assets/avstrija-2-mod.jpg',
+		src: avstrija2,
 	},
 	{
 		title: 'Prireditveni pagode',
 		icon: 'pagode',
 		content:
 			'Skladiščne hale so optimalna rešitev za dodaten skladiščni prostor, ki se lahko uporablja kot začasen ali stalen objekt. Njihova zasnovanost.',
-
-		src: '../src/assets/hale-one.JPG',
+		src: haleOne,
 	},
 	{
 		title: 'Večnamenska oprema',
 		icon: 'oprema',
 		content:
 			'Skladiščne hale so optimalna rešitev za dodaten skladiščni prostor, ki se lahko uporablja kot začasen ali stalen objekt. Njihova zasnovanost.',
-
-		src: '../src/assets/banner-3-mod.jpg',
+		src: banner3,
 	},
 ];
+
 const StoritveNew = () => {
 	const [progress, setProgress] = React.useState([1]);
 	const [selectedIcon, setSelectedIcon] = React.useState(0);
