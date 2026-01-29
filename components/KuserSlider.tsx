@@ -2,37 +2,41 @@ import SliderKmt from '../components/Slider';
 import { useRef } from 'react';
 import { useGSAP } from '@gsap/react';
 import { gsap } from 'gsap';
+import haleOne from '@/assets/images/hale-one.JPG';
+import podjetje from '@/assets/images/podjetje.jpg';
+import montaza from '@/assets/images/montaza.jpg';
+import montazaPage from '@/assets/images/montaza-page.jpg';
 
 const sliderItems = [
 	{
 		title: 'Ekipa',
 		content: 'Izkušnje na terenu',
-		img: '../src/assets/images/hale-one.JPG',
+		img: haleOne,
 	},
 	{
 		title: 'Vizija',
 		content: 'Jasna vizija',
-		img: '../src/assets/images/podjetje.jpg',
+		img: podjetje,
 	},
 	{
 		title: 'Izkušnje',
 		content: 'Na mednarodnih tleh',
-		img: '../src/assets/images/montaza.jpg',
+		img: montaza,
 	},
 	{
 		title: 'Montaža',
 		content: 'Evropski standardi',
-		img: '../src/assets/images/montaza-page.jpg',
+		img: montazaPage,
 	},
 	{
 		title: 'Nemčija',
 		content: 'Lorem lala dsfa dasjf',
-		img: '../src/assets/images/hale-one.JPG',
+		img: haleOne,
 	},
 	{
 		title: 'Nemčija',
 		content: 'Lorem lala dsfa dasjf',
-		img: '../src/assets/images/hale-one.JPG',
+		img: haleOne,
 	},
 ];
 
