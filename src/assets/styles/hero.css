@@ -1,0 +1,243 @@
+header {
+	position: relative;
+	display: grid;
+
+	grid-column: full-start/full-end;
+	grid-template-columns: inherit;
+}
+nav {
+	display: grid;
+	position: absolute;
+	background-color: rgba(255, 255, 255, 1);
+	z-index: 10;
+	top: 2rem;
+
+	grid-template-columns: 1fr 1fr 1fr; /* left | center | right */
+	align-items: center;
+	padding: 4px 20px 4px 40px;
+	grid-column: main-start / main-end;
+	width: 100%;
+	box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.05);
+	border-radius: 999px;
+}
+
+/* Left logo */
+.nav__left {
+	justify-self: start;
+}
+
+.nav__left img {
+	height: 65px;
+	margin-top: 3px;
+}
+
+.nav__center {
+	justify-self: center;
+}
+.nav__center ul {
+	display: flex;
+	justify-content: center; /* items centered inside middle column */
+	gap: 3rem;
+}
+
+.nav__right {
+	justify-self: end;
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+}
+/* Right list */
+.nav__right ul {
+	display: flex;
+
+	gap: 0.1rem;
+	align-items: center;
+}
+
+nav a {
+	font-size: 1rem;
+	color: #27272a;
+	position: relative;
+	padding: 0.25rem 0;
+	letter-spacing: 0.7px;
+	font-weight: 600;
+}
+.nav__center a::after {
+	content: '';
+	position: absolute;
+	inset-inline: 0;
+	bottom: 0;
+	height: 2px;
+	background: var(--color-main);
+	scale: 0 1;
+	transform-origin: left;
+	transition: scale 0.25s ease;
+}
+
+nav a:hover::after,
+nav a:focus-visible::after {
+	scale: 1 1;
+}
+
+.nav__button {
+	background: var(--gradient-black);
+	padding: 0.7rem 1.5rem 0.7rem 1.5rem;
+	border-radius: var(--radius-small);
+	cursor: pointer;
+	border: none !important;
+	border-radius: 999px;
+	transition: opacity 0.25s ease-in-out; /* smooth transition */
+}
+
+.nav__button {
+	color: #fff !important;
+}
+
+.nav__button:hover {
+	opacity: 0.9;
+}
+
+.hero {
+	display: grid;
+	position: relative;
+	grid-column: full-start/full-end;
+	grid-template-columns: 1fr [main-start]repeat(10, 9.1rem) [main-end] 1fr;
+}
+.hero-video {
+	grid-column: 1/-1;
+	width: 100%;
+	height: 90vh; /* or height: 100vh */
+	display: block;
+	object-fit: cover; /* optional for hero videos */
+}
+
+.hero__overlay {
+	position: absolute; /* layer over the video */
+	top: 77%; /* vertical centering */
+	transform: translateY(-50%);
+	grid-column: main-start/main-end;
+	display: grid;
+	grid-template-columns: repeat(10, 1fr);
+	gap: 1rem;
+
+	width: 100%;
+}
+
+.hero__overlay-text {
+	display: grid;
+	grid-column: 1/-1;
+	height: min-content;
+}
+
+.hero__overlay-text h1 {
+	color: #fff;
+	font-weight: 300;
+
+	line-height: 68px;
+}
+.hero__overlay-top h1 {
+	font-weight: 300;
+}
+.hero__overlay-center h1 {
+	font-size: 3.5rem;
+	font-weight: 600;
+}
+.hero__overlay-center span {
+	font-weight: 600;
+}
+.hero__overlay-bottom h1 {
+	font-weight: 300;
+	font-size: 2rem;
+}
+
+.hero__overlay-button {
+	grid-column: 1/-1;
+	flex-shrink: 0;
+	width: 200px;
+	background: var(--gradient-orange);
+	padding-block: 0.8rem; /* top & bottom */
+	padding-inline: 1rem;
+	border-radius: 999px;
+	cursor: pointer;
+	text-align: center;
+	transition: opacity 0.25s ease-in-out; /* smooth transition */
+	border: none !important;
+}
+
+.hero__overlay-button:hover {
+	opacity: 0.4;
+}
+.hero__overlay-buttons-container {
+	width: 100%; /* take full width of parent */
+	padding: 0 0px; /* optional horizontal padding */
+	box-sizing: border-box; /* ensure padding doesn’t break layout */
+
+	grid-column: 1/-1;
+}
+
+.hero__overlay-buttons {
+	display: flex; /* horizontal layout */
+	align-items: center; /* vertical alignment */
+	gap: 16px; /* spacing between left items */
+}
+
+.hero__overlay-button,
+.hero__overlay-youtube {
+	flex-shrink: 0; /* prevent shrinking */
+}
+
+.hero__overlay-right {
+	margin-left: auto; /* push to far right */
+}
+.hero__overlay-right ul {
+	gap: 10px;
+	display: flex;
+	flex-direction: column;
+}
+
+.hero__overlay-right li {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.hero__overlay-right svg {
+	background-color: var(--color-main) !important;
+	color: white;
+	padding: 0.3rem;
+	border-radius: 1rem;
+}
+.hero__overlay-right p {
+	color: white;
+}
+.hero__overlay-button a {
+	color: #fff;
+}
+.hero__overlay-youtube {
+	height: 65px;
+	padding: 0 !important;
+	align-items: center;
+}
+.hero__overlay-youtube svg {
+	width: 65px;
+	height: 65px;
+	color: white;
+	cursor: pointer;
+	transition: transform 0.3s ease;
+}
+
+.hero__overlay-youtube svg {
+	animation: pulse 2.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
